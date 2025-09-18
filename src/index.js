@@ -78,8 +78,10 @@ class Game extends React.Component {
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
-root.render(<Router basename={process.env.REACT_APP_URI}>
-  <Routes>
-    <Route path="/tic-tac-toe" element={<Game />} />
-  </Routes>
-</Router>)
+root.render(
+  <Router basename={process.env.PUBLIC_URL}>
+    <Routes>
+      <Route path="/" element={<Game />} />
+    </Routes>
+  </Router>
+)
